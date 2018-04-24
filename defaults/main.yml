@@ -2,7 +2,7 @@
 ### Orchestrator Installation
 orchestrator_create_image: "{{ global_create_image | default(false) }}"
 orchestrator_download_src: https://github.com/github/orchestrator/releases/download
-orchestrator_version: 2.1.4
+orchestrator_version: 3.0.10
 orchestrator_install_via_packagecloud: false
 orchestrator_upgrade_if_older_version: false
 orchestrator_is_server: true
@@ -47,6 +47,7 @@ orchestrator_hostname_resolve_method: none
 orchestrator_mysql_hostname_resolve_method: none
 orchestrator_default_instance_port: 3306
 orchestrator_reject_hostname_resolve_pattern:
+orchestrator_cluster_name_to_alias: { 127.0.0.1: test suite }
 orchestrator_detect_cluster_alias_query: "select ifnull(max(cluster_name), '') as cluster_alias from meta.cluster where anchor = 1"
 orchestrator_detect_cluster_domain_query: "select ifnull(max(cluster_domain), '') as cluster_domain from meta.cluster where anchor = 1"
 orchestrator_datacenter_pattern: ""
@@ -90,6 +91,7 @@ orchestrator_intermediate_master_failover_processes: []
 
 ### Orchestrator Security Options
 orchestrator_read_only: false
+orchestrator_super_read_only: false
 orchestrator_authentication_method: multi
 orchestrator_http_auth_user: datateam
 orchestrator_http_auth_password: datateampass
@@ -124,3 +126,7 @@ orchestrator_mysql_orchestrator_ssl_ca_file:
 orchestrator_enable_syslog: false
 orchestrator_audit_log_file:
 orchestrator_audit_to_syslog: false
+
+### Orchestart KV Options
+orchestrator_kv_cluster_master_prefix: "mysql/master"
+orchestrator_kv_consul_address:

@@ -86,6 +86,9 @@ orchestrator_sd_options:
   sd_option_detect_cluster_alias_query:
     variable: "DetectClusterAliasQuery"
     variable_value: "{{ orchestrator_detect_cluster_alias_query }}"
+  sd_option_detect_cluster_name_to_alias:
+    variable: "ClusterNameToAlias"
+    variable_value: "{{ orchestrator_cluster_name_to_alias }}"
   sd_option_detect_cluster_domain_query:
     variable: "DetectClusterDomainQuery"
     variable_value: "{{ orchestrator_detect_cluster_domain_query }}"
@@ -107,6 +110,12 @@ orchestrator_sd_options:
   sd_option_mysql_discovery_read_timeout_seconds:
     variable: "MySQLDiscoveryReadTimeoutSeconds"
     variable_value: "{{ orchestrator_mysql_discovery_read_timeout_seconds }}"
+  sd_option_kv_cluster_master_prefix:
+    variable: "KVClusterMasterPrefix"
+    variable_value: "{{ orchestrator_kv_cluster_master_prefix }}"
+  sd_option_kv_consul_address:
+    variable: "ConsulAddress"
+    variable_value: "{{ orchestrator_kv_consul_address }}"
 
 orchestrator_topology_options:
   topology_option_detect_semi_sync_enforced_query:
@@ -192,6 +201,9 @@ orchestrator_security_options:
   security_option_read_only:
     variable: "ReadOnly"
     variable_value: "{{ orchestrator_read_only }}"
+  security_option_super_read_only:
+    variable: "UseSuperReadOnly"
+    variable_value: "{{ orchestrator_super_read_only }}"
   security_option_authentication_method:
     variable: "AuthenticationMethod"
     variable_value: "{{ orchestrator_authentication_method }}"
