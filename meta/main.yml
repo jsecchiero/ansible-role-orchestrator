@@ -2,8 +2,18 @@
 galaxy_info:
   author: Jacopo Secchiero
   description: Install orchestrator for mysql ha
-  min_ansible_version: 2.4
+  license: GPL
+  min_ansible_version: 2.1
   platforms:
-    - name: Ubuntu
-      versions:
-        - xenial
+  - name: Arch Linux
+    versions:
+    - all
+  - name: EL
+    versions:
+      - 7
+  - name: Debian
+    versions:
+      - wheezy
+      - jessie
+
+dependencies: []
