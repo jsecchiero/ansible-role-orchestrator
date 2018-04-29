@@ -43,6 +43,21 @@ orchestrator_general_options:
   general_option_mysql_connect_timeout_seconds:
     variable: "MySQLConnectTimeoutSeconds"
     variable_value: "{{ orchestrator_mysql_connect_timeout_seconds }}"
+  general_option_raft_enabled:
+    variable: "RaftEnabled"
+    variable_value: "{{ orchestrator_raft_enabled }}"
+  general_option_raft_data_dir:
+    variable: "RaftDataDir"
+    variable_value: "{{ orchestrator_raft_data_dir }}"
+  general_option_raft_bind:
+    variable: "RaftBind"
+    variable_value: "{{ orchestrator_raft_bind }}"
+  general_option_raft_default_port:
+    variable: "DefaultRaftPort"
+    variable_value: "{{ orchestrator_raft_default_port }}"
+  general_option_raft_nodes:
+    variable: "RaftNodes"
+    variable_value: "{{ orchestrator_raft_nodes }}"
 
 orchestrator_database_options:
   database_option_mysql_orchestrator_host:

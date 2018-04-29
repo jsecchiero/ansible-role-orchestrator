@@ -31,6 +31,11 @@ orchestrator_status_simple_health: true
 orchestrator_skip_maxscale_check: true
 orchestrator_reasonable_maintenance_replication_lag_seconds: 20
 orchestrator_mysql_connect_timeout_seconds: 2
+orchestrator_raft_enabled: ""
+orchestrator_raft_data_dir: ""
+orchestrator_raft_bind: ""
+orchestrator_raft_default_port: ""
+orchestrator_raft_nodes: ""
 
 ### Orchestrator Database Options
 orchestrator_mysql_orchestrator_host: 127.0.0.1
