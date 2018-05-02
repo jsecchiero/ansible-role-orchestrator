@@ -86,4 +86,9 @@
       owner: "{{ orchestrator_user }}"
       state: link
 
+  - name: orchestrator | install | create systemd unit
+    file:
+      src: "orchestrator.service"
+      dest: "/etc/systemd/system/orchestrator.service"
+
   when: not orchestrator_install_via_packagecloud
