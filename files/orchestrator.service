@@ -1,0 +1,14 @@
+[Unit]
+Description="orchestrator: MySQL replication management and visualization"
+After=syslog.target network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+ExecStart=/usr/local/bin/orchestrator --verbose http
+PIDFile=/var/run/orchestrator.pid
+WorkingDirectory=/usr/local/orchestrator
+
+[Install]
+WantedBy=multi-user.target
