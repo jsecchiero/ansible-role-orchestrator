@@ -87,7 +87,7 @@
       state: link
 
   - name: orchestrator | install | create systemd unit
-    file:
+    copy:
       src: "orchestrator.service"
       dest: "/etc/systemd/system/orchestrator.service"
 
