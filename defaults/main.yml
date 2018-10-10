@@ -4,6 +4,7 @@ orchestrator_create_image: "{{ global_create_image | default(false) }}"
 orchestrator_download_src: https://github.com/github/orchestrator/releases/download
 orchestrator_version: 3.0.10
 orchestrator_install_via_packagecloud: false
+orchestrator_upgrade: false
 orchestrator_upgrade_if_older_version: false
 orchestrator_is_server: true
 

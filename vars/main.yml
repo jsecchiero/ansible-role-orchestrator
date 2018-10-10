@@ -8,7 +8,7 @@ orchestrator_packages:
   - orchestrator
   - orchestrator-cli
 
-orchestrator_install_dir: "{{ orchestrator_home_dir }}/orchestrator-{{ orchestrator_version }}"
+orchestrator_install_dir: "{{ orchestrator_home_dir }}/orchestrator"
 
 orchestrator_src: "{{ orchestrator_download_src }}/v{{ orchestrator_version }}/orchestrator-{{ orchestrator_version }}-linux-amd64.tar.gz"
 

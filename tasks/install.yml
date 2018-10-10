@@ -43,7 +43,7 @@
     file:
       path: "{{ orchestrator_installed_file }}"
       state: absent
-    when: orchestrator_upgrade_if_older_version
+    when: orchestrator_upgrade
 
   - name: orchestrator | install | download and unpack orchestrator
     unarchive:
